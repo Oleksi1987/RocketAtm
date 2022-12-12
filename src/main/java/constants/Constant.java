@@ -33,4 +33,9 @@ public class Constant {
         public static final String CORRECT_PROMO_CODE = "TRS10";
         public static final String INCORRECT_PROMO_CODE = "TRS12";
     }
+    public static class StoreData {
+        public static final String STORE_NAME = "Myrka Shop";
+        public static final String STORE_ADDRESS = "Victoria str";
+        public static final String STORE_CITY = "New York";
+    }
 }
