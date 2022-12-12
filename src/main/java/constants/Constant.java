@@ -10,13 +10,14 @@ public class Constant {
         public static final String ROCKET_HOME_PAGE = "https://rocketatm.com/backend/site/index";
     }
     public static class Passwords {
-        public static final String CORRECT_PASSWORD = "26111987";
+        public static final String CORRECT_PASSWORD = "!Admin2242";
         public static final String INCORRECT_PASSWORD = "111211";
         public static final String PASSWORD_EXAMPLE = "111111";
     }
     public static class Emails {
+        public static final String ADMIN_EMAIL = "admin@rocketatm.com";
         public static final String EMAIL_ADDRESS_EXISTING = "yashchuk.o@softhousegroup.com";
-        public static final String EMAIL_ADDRESS = "yashchuk.o+1@softhousegroup.com";
+        public static final String EMAIL_ADDRESS_NOT_EXISTING = "yashchuk.o+1@softhousegroup.com";
     }
     public static class Quantity {
         public static final char DEFAULT_QTY = 150;
