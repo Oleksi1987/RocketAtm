@@ -7,7 +7,7 @@ public class Constant {
 
     }
     public static class Urls {
-        public static final String ROCKET_HOME_PAGE = "https://www.comda.com/us/";
+        public static final String ROCKET_HOME_PAGE = "https://rocketatm.com/backend/site/index";
     }
     public static class Passwords {
         public static final String CORRECT_PASSWORD = "26111987";
