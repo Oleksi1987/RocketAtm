@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import pages.base.BasePage;
 
+import static constants.Constant.Emails.USER_EMAIL_ADDRESS;
 import static constants.Constant.StoreData.*;
 
 public class FirstStepPage extends BasePage {
@@ -34,7 +35,7 @@ public class FirstStepPage extends BasePage {
         return this;
      }
     private final By SelectProvince = By.cssSelector("[id='Atm_state_id'],[value='2']");
-    public FirstStepPage chooseStateProvinceSelector() {
+    public FirstStepPage chooseStateProvince() {
         driver.findElement(SelectProvince).click();
         return this;
     }
@@ -64,4 +65,45 @@ public class FirstStepPage extends BasePage {
         driver.findElement(LegalEIN).sendKeys(LEGAL_EIN);
         return this;
     }
+    private final By NewUser = By.xpath("//input[@id='Atm_select_user_2']");
+    public FirstStepPage chooseNewUserOption() {
+        driver.findElement(NewUser).click();
+        return this;
+    }
+    private final By UserEmail = By.xpath("//input[@id='search_user']");
+    public FirstStepPage insertUserEmail(){
+        driver.findElement(UserEmail).sendKeys(USER_EMAIL_ADDRESS);
+        return this;
+    }
+    private final By UserName = By.xpath("//input[@id='search_user']");
+    public FirstStepPage insertFirstName(){
+        driver.findElement(UserName).sendKeys(USER_FIRST_NAME);
+        return this;
+    }
+    private final By UserLastName = By.xpath("//input[@id='StoreOwner_last_name']");
+    public FirstStepPage insertLastName(){
+        driver.findElement(UserLastName).sendKeys(USER_LAST_NAME);
+        return this;
+    }
+    private final By UserAddress = By.xpath("//input[@id='StoreOwner_address']");
+    public FirstStepPage insertUserAddress(){
+        driver.findElement(UserAddress).sendKeys(USER_ADDRESS);
+        return this;
+    }
+    private final By UserCity = By.xpath("//input[@id='StoreOwner_city']");
+    public FirstStepPage insertUserCity(){
+        driver.findElement(UserCity).sendKeys(USER_ADDRESS);
+        return this;
+    }
+    private final By UserState = By.xpath("//select[@id='StoreOwner_state_id']");
+    public FirstStepPage clickUserStateProvinceSelector() {
+        driver.findElement(UserState).click();
+        return this;
+    }
+    private final By SelectUserProvince = By.xpath("//select[@id = 'StoreOwner_state_id']//option[contains(text(), 'ARIZONA - AZ')]");
+    public FirstStepPage chooseUserStateProvince() {
+        driver.findElement(SelectUserProvince).click();
+        return this;
+    }
+
 }

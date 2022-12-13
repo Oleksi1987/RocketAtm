@@ -16,7 +16,7 @@ public class Constant {
     }
     public static class Emails {
         public static final String ADMIN_EMAIL = "admin@rocketatm.com";
-        public static final String EMAIL_ADDRESS_EXISTING = "yashchuk.o@softhousegroup.com";
+        public static final String USER_EMAIL_ADDRESS = "yashchuk.o+77@softhousegroup.com";
         public static final String EMAIL_ADDRESS_NOT_EXISTING = "yashchuk.o+1@softhousegroup.com";
     }
     public static class Quantity {
@@ -41,5 +41,8 @@ public class Constant {
         public static final String STORE_TELEPHONE_NUMBER = "111-111-1111";
         public static final String LEGAL_NAME = "Myrka Vasulivna";
         public static final String LEGAL_EIN = "222-22-2222";
+        public static final String USER_FIRST_NAME = "Oleksii";
+        public static final String USER_LAST_NAME = "QA";
+        public static final String USER_ADDRESS = "Peremoga Str.";
     }
 }
