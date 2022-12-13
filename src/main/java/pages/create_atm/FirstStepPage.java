@@ -1,6 +1,7 @@
 package pages.create_atm;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import pages.base.BasePage;
 
@@ -8,6 +9,7 @@ import static constants.Constant.StoreData.*;
 
 public class FirstStepPage extends BasePage {
 
+    JavascriptExecutor js = (JavascriptExecutor)driver;
     public FirstStepPage(WebDriver driver) {
         super(driver);
     }
@@ -26,21 +28,19 @@ public class FirstStepPage extends BasePage {
         driver.findElement(StoreCityField).sendKeys(STORE_CITY);
         return this;
     }
-    /** private final By StateProvinceSelector = By.xpath("//input[@id = 'Atm_state_id']");
+     private final By StateProvinceSelector = By.xpath("//select[@id = 'Atm_state_id']");
     public FirstStepPage clickStateProvinceSelector() {
         driver.findElement(StateProvinceSelector).click();
         return this;
      }
-     */
-
-    private final By SelectProvince = By.xpath("//input[@id = 'Atm_state_id']");
+    private final By SelectProvince = By.cssSelector("[id='Atm_state_id'],[value='2']");
     public FirstStepPage chooseStateProvinceSelector() {
-        driver.findElement(SelectProvince).sendKeys("ALASKA");
+        driver.findElement(SelectProvince).click();
         return this;
     }
     private final By InsertZip = By.xpath("//input[@id = 'Atm_zip']");
     public FirstStepPage insertZip() {
-        driver.findElement(InsertZip).sendKeys("ALASKA");
+        driver.findElement(InsertZip).sendKeys(ZIP);
         return this;
     }
     private final By InsertStoreNumber = By.xpath("//input[@id = 'Atm_cellPhone']");
@@ -48,8 +48,9 @@ public class FirstStepPage extends BasePage {
         driver.findElement(InsertStoreNumber).sendKeys(STORE_TELEPHONE_NUMBER);
         return this;
     }
-    private final By LegalName = By.xpath("//input[@id = 'Atm_cellPhone']");
+    private final By LegalName = By.xpath("//input[@id = 'Atm_legal_name']");
     public FirstStepPage insertLegalName() {
+        js.executeScript("scrollBy(0, 120)");
         driver.findElement(LegalName).sendKeys(LEGAL_NAME);
         return this;
     }
@@ -60,7 +61,7 @@ public class FirstStepPage extends BasePage {
     }
     private final By LegalEIN = By.xpath("//input[@id = 'Atm_legal_ein']");
     public FirstStepPage insertLegalEIN() {
-        driver.findElement(LegalName).sendKeys(LEGAL_EIN);
+        driver.findElement(LegalEIN).sendKeys(LEGAL_EIN);
         return this;
     }
 }

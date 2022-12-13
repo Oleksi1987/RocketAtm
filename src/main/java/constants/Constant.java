@@ -37,6 +37,7 @@ public class Constant {
         public static final String STORE_NAME = "Myrka Shop";
         public static final String STORE_ADDRESS = "Victoria str";
         public static final String STORE_CITY = "New York";
+        public static final String ZIP = "12345";
         public static final String STORE_TELEPHONE_NUMBER = "111-111-1111";
         public static final String LEGAL_NAME = "Myrka Vasulivna";
         public static final String LEGAL_EIN = "222-22-2222";

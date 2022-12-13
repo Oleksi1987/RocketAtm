@@ -21,9 +21,10 @@ public class CreateAtmTest extends BaseTest {
                 .insertStoreName()
                 .insertStoreAddress()
                 .insertCity()
-       //         .clickStateProvinceSelector()
+                .clickStateProvinceSelector()
                 .chooseStateProvinceSelector()
-                .insertZip().insertStoreNumber()
+                .insertZip()
+                .insertStoreNumber()
                 .insertLegalName()
                 .chooseLegalType()
                 .insertLegalEIN();
