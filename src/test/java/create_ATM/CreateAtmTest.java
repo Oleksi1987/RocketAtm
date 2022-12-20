@@ -27,6 +27,21 @@ public class CreateAtmTest extends BaseTest {
                 .insertStoreNumber()
                 .insertLegalName()
                 .chooseLegalType()
-                .insertLegalEIN();
+                .insertLegalEIN()
+                .chooseNewUserOption()
+                .insertUserEmail()
+                .insertFirstName()
+                .insertLastName()
+                .insertUserAddress()
+                .insertUserCity()
+                .clickUserStateProvinceSelector()
+                .chooseUserStateProvince()
+                .insertUserZip()
+                .insertUserCellPhone()
+                .chooseUserBirthDate()
+                .insertOwnerLegalName()
+                .insertSocialSecurity()
+                .clickNextButtonStepOne();
+
     }
 }

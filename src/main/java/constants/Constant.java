@@ -44,5 +44,10 @@ public class Constant {
         public static final String USER_FIRST_NAME = "Oleksii";
         public static final String USER_LAST_NAME = "QA";
         public static final String USER_ADDRESS = "Peremoga Str.";
+        public static final String USER_CITY = "Washington";
+        public static final String USER_ZIP = "32132";
+        public static final String USER_CELL_PHONE = "888-888-8888";
+        public static final String SOCIAL_SECURITY = "999-99-9999";
+
     }
 }

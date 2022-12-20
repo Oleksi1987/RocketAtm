@@ -51,7 +51,7 @@ public class FirstStepPage extends BasePage {
     }
     private final By LegalName = By.xpath("//input[@id = 'Atm_legal_name']");
     public FirstStepPage insertLegalName() {
-        js.executeScript("scrollBy(0, 120)");
+        js.executeScript("scrollBy(0, 170)");
         driver.findElement(LegalName).sendKeys(LEGAL_NAME);
         return this;
     }
@@ -70,12 +70,12 @@ public class FirstStepPage extends BasePage {
         driver.findElement(NewUser).click();
         return this;
     }
-    private final By UserEmail = By.xpath("//input[@id='search_user']");
+    private final By UserEmail = By.xpath("//input[@id='StoreOwner_email']");
     public FirstStepPage insertUserEmail(){
         driver.findElement(UserEmail).sendKeys(USER_EMAIL_ADDRESS);
         return this;
     }
-    private final By UserName = By.xpath("//input[@id='search_user']");
+    private final By UserName = By.xpath("//input[@id='StoreOwner_first_name']");
     public FirstStepPage insertFirstName(){
         driver.findElement(UserName).sendKeys(USER_FIRST_NAME);
         return this;
@@ -92,7 +92,7 @@ public class FirstStepPage extends BasePage {
     }
     private final By UserCity = By.xpath("//input[@id='StoreOwner_city']");
     public FirstStepPage insertUserCity(){
-        driver.findElement(UserCity).sendKeys(USER_ADDRESS);
+        driver.findElement(UserCity).sendKeys(USER_CITY);
         return this;
     }
     private final By UserState = By.xpath("//select[@id='StoreOwner_state_id']");
@@ -103,6 +103,38 @@ public class FirstStepPage extends BasePage {
     private final By SelectUserProvince = By.xpath("//select[@id = 'StoreOwner_state_id']//option[contains(text(), 'ARIZONA - AZ')]");
     public FirstStepPage chooseUserStateProvince() {
         driver.findElement(SelectUserProvince).click();
+        return this;
+    }
+    private final By UserZip = By.xpath("//input[@id='StoreOwner_zip']");
+    public FirstStepPage insertUserZip() {
+        driver.findElement(UserZip).sendKeys(USER_ZIP);
+        return this;
+    }
+    private final By UserCellPhone = By.xpath("//input[@id='StoreOwner_phone']");
+    public FirstStepPage insertUserCellPhone() {
+        driver.findElement(UserCellPhone).sendKeys(USER_CELL_PHONE);
+        return this;
+    }
+    private final By UserBirthDate = By.xpath("//input[@id='StoreOwner_birth_date']");
+    public FirstStepPage chooseUserBirthDate() {
+        driver.findElement(UserBirthDate).click();
+        return this;
+    }
+    private final By OwnerLegalName = By.xpath("//input[@id='StoreOwner_legal_name']");
+    public FirstStepPage insertOwnerLegalName() {
+        js.executeScript("scrollBy(0, 150)");
+        driver.findElement(OwnerLegalName).sendKeys(USER_FIRST_NAME + " " + USER_LAST_NAME);
+        return this;
+    }
+    private final By SocialSecurity = By.xpath("//input[@id='StoreOwner_socSec']");
+    public FirstStepPage insertSocialSecurity() {
+        js.executeScript("scrollBy(0, 150)");
+        driver.findElement(SocialSecurity).sendKeys(SOCIAL_SECURITY);
+        return this;
+    }
+    private final By NextButtonStepOne = By.cssSelector("[value='Next']");
+    public FirstStepPage clickNextButtonStepOne() {
+        driver.findElement(NextButtonStepOne).click();
         return this;
     }
 
