@@ -39,6 +39,9 @@ public class CreateAtmTest extends BaseTest {
                 .insertUserZip()
                 .insertUserCellPhone()
                 .chooseUserBirthDate()
+                .chooseUserBirthDateYear()
+                .chooseUserBirthDateMonth()
+                .chooseUserBirthDateDay()
                 .insertOwnerLegalName()
                 .insertSocialSecurity()
                 .clickNextButtonStepOne();

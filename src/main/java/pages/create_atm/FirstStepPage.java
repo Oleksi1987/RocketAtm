@@ -120,6 +120,22 @@ public class FirstStepPage extends BasePage {
         driver.findElement(UserBirthDate).click();
         return this;
     }
+
+    private final By UserBirthDateYear = By.xpath("//span[@class = 'year new']");
+    public FirstStepPage chooseUserBirthDateYear() {
+        driver.findElement(UserBirthDateYear).click();
+        return this;
+    }
+    private final By UserBirthDateMonth = By.xpath("//span[@class = 'month'][2]");
+    public FirstStepPage chooseUserBirthDateMonth() {
+        driver.findElement(UserBirthDateMonth).click();
+        return this;
+    }
+    private final By UserBirthDateDay = By.xpath("//td[@class = 'day'][7]");
+    public FirstStepPage chooseUserBirthDateDay() {
+        driver.findElement(UserBirthDateDay).click();
+        return this;
+    }
     private final By OwnerLegalName = By.xpath("//input[@id='StoreOwner_legal_name']");
     public FirstStepPage insertOwnerLegalName() {
         js.executeScript("scrollBy(0, 150)");
