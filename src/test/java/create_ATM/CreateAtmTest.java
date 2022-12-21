@@ -45,6 +45,18 @@ public class CreateAtmTest extends BaseTest {
                 .insertOwnerLegalName()
                 .insertSocialSecurity()
                 .clickNextButtonStepOne();
+        secondStepPage
+                .chooseATM()
+                .clickSelectModel()
+                .selectAtmModel()
+                .clickSelectAtmCassettes()
+                .chooseAmountOfAtmCassettes()
+                .clickOnCassette1()
+                .chooseAmountOnCassette1()
+                .clickOnCassette2()
+                .chooseAmountOnCassette2()
+                .chooseAtmOwner()
+                .clickNextButtonStepTwo();
 
     }
 }
