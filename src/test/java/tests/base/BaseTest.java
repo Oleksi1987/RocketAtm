@@ -8,6 +8,7 @@ import org.testng.annotations.AfterTest;
 import pages.base.BasePage;
 import pages.create_atm.FirstStepPage;
 import pages.create_atm.SecondStepPage;
+import pages.create_atm.ThirdStepPage;
 import pages.login.LoginPage;
 import pages.master_page.MasterPage;
 
@@ -22,6 +23,7 @@ public class BaseTest {
     protected MasterPage masterPage = new MasterPage(driver);
     protected FirstStepPage firstStepPage = new FirstStepPage(driver);
     protected SecondStepPage secondStepPage = new SecondStepPage(driver);
+    protected ThirdStepPage thirdStepPage = new ThirdStepPage(driver);
 
     @AfterTest
     public void clearCookiesAndLocalStorage() {
